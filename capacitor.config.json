@@ -1,0 +1,7 @@
+{
+  "appId": "com.dassy.tailoringbook",
+  "appName": "DASSY Tailoring Book",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": { "androidScheme": "https" }
+}
