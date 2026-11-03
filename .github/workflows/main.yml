@@ -9,41 +9,39 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Set up Java
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 21
 
-            - name: Set up Android SDK
+      - name: Setup Android
         uses: android-actions/setup-android@v3
         with:
-          accept-android-sdk-licenses: false
+          cmdline-tools-version: latest
 
-      - name: Accept Android SDK licenses
+      - name: Accept licenses
         run: yes | sdkmanager --licenses
 
-      - name: Install Android SDK packages
+      - name: Install Android packages
         run: sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
-        
 
       - name: Install dependencies
         run: npm install
 
-      - name: Create Android project
+      - name: Add Android
         run: npx cap add android
 
-      - name: Sync app
+      - name: Sync Android
         run: npx cap sync android
 
       - name: Build APK
