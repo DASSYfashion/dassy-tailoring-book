@@ -1,0 +1,9 @@
+{
+  "name": "DASSY Tailoring Management Book",
+  "short_name": "DASSY Book",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#061943",
+  "description": "Offline tailoring customers, measurements, orders and payments"
+}

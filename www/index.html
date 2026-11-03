@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#061943"><meta name="description" content="DASSY Tailoring Measurement Book">
+<link rel="manifest" href="manifest.webmanifest">
+<title>DASSY Measurement Book</title>
+<style>
+:root{--ink:#17191d;--silver:#c5c8ce;--bg:#f4f5f7;--card:#fff;--muted:#6c727d;--line:#e5e7eb;--accent:#30343b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:linear-gradient(135deg,#17191d,#343942);color:white;padding:22px 18px 18px;border-bottom:3px solid #aeb3bb}
+.brand{display:flex;align-items:center;gap:12px}.mark{width:44px;height:44px;border:1px solid #9da3ad;border-radius:12px;display:grid;place-items:center;font-size:22px;color:#e2e4e8}
+h1{font-size:19px;letter-spacing:1.4px;margin:0}.sub{font-size:11px;color:#c6cad1;letter-spacing:1.5px;margin-top:3px}
+.welcome{margin-top:22px;font-size:22px;font-weight:700}.hint{color:#c6cad1;font-size:13px;margin-top:4px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.stat{background:#ffffff16;border:1px solid #ffffff20;border-radius:12px;padding:12px}.stat b{display:block;font-size:24px}.stat span{font-size:12px;color:#d1d4da}
+nav{display:flex;gap:8px;padding:12px;overflow:auto;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:3}
+nav button{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:20px;padding:9px 13px;font-weight:650;color:#4c515a}
+nav button.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+main{max-width:760px;margin:auto;padding:16px 14px 90px}.panel{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:16px;margin-bottom:14px;box-shadow:0 2px 9px #1111}
+h2{font-size:18px;margin:0 0 14px}h3{font-size:14px;margin:18px 0 8px;color:#4c515a}
+label{display:block;font-size:12px;font-weight:700;color:#555d68;margin:10px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #d8dbe0;border-radius:9px;background:#fff;color:#17191d;font:inherit;min-width:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}.full{grid-column:1/-1}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+button.primary,.btn{border:0;background:var(--ink);color:white;padding:11px 15px;border-radius:9px;font-weight:700;cursor:pointer}
+button.secondary{border:1px solid #cfd3d9;background:white;color:#292d33;padding:10px 13px;border-radius:9px;font-weight:650;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}#googleSignOutBtn{display:none}button.danger{background:#fff1f1;color:#a32626;border:1px solid #f1cccc;padding:9px 12px;border-radius:9px}
+.muted{color:var(--muted);font-size:12px}.customer{padding:13px 0;border-bottom:1px solid var(--line)}.customer:last-child{border:0}
+.customer-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.customer strong{font-size:15px}.tag{font-size:11px;background:#eef0f3;padding:4px 8px;border-radius:20px;color:#444}
+.empty{text-align:center;padding:25px 10px;color:#727985}
+.notice{background:#f0f2f5;border-radius:10px;padding:11px;font-size:12px;color:#505762;line-height:1.5}
+.hidden{display:none!important}
+footer{text-align:center;color:#858b95;font-size:11px;padding:20px}
+@media(max-width:420px){.grid{grid-template-columns:1fr 1fr}.panel{padding:13px}.stats{grid-template-columns:1fr 1fr}.stat b{font-size:20px}}
+.measure-table{width:100%;border-collapse:collapse;margin:8px 0 18px}.measure-table th,.measure-table td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}.measure-table th{font-weight:600;color:#555d68;width:60%}.history-item{border:1px solid var(--line);border-radius:10px;padding:11px;margin:9px 0}.history-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px;font-size:12px}
+@media print{body{background:#fff}.no-print,nav,header,footer{display:none!important}main{padding:0;max-width:none}.panel{border:0;box-shadow:none;padding:0}#detail{display:block!important}.tab:not(#detail){display:none!important}}
+
+/* DASSY luxury navy-and-gold redesign */
+:root{--ink:#071b49;--silver:#d9b64c;--bg:#f4f6fb;--card:#fff;--muted:#68738b;--line:#e4e8f1;--accent:#0b347c;--gold:#e8bd42;--navy:#061943}
+body{background:radial-gradient(circle at 85% 10%,#fff 0,#f5f7fc 38%,#edf1f8 100%);color:#101d3b;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;padding-bottom:82px}
+header{position:relative;overflow:hidden;background:linear-gradient(120deg,#041638 0%,#092c68 58%,#12499a 100%);color:#fff;padding:24px 20px 25px;border:0;border-bottom:4px solid var(--gold);border-radius:0 0 28px 28px;box-shadow:0 12px 28px #071b4930}
+header:after{content:'✂';position:absolute;right:20px;top:22px;font-size:116px;line-height:1;color:#ffffff0d;transform:rotate(-18deg);pointer-events:none}
+.brand{position:relative;z-index:1;gap:13px}.mark{width:48px;height:48px;border:1px solid #e8bd42;border-radius:15px;background:linear-gradient(145deg,#123d83,#061943);box-shadow:0 4px 15px #0003;color:#f5ca4e;font-size:26px}
+h1{font-size:22px;letter-spacing:3px;font-weight:850}.sub{font-size:10px;color:#e8c95e;letter-spacing:2px;font-weight:700}
+.welcome{position:relative;z-index:1;margin-top:23px;font-size:25px;line-height:1.15;max-width:340px}.hint{position:relative;z-index:1;color:#d7e2f7;font-size:13px;margin-top:7px}
+.stats{position:relative;z-index:1;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:20px}.stat{background:#ffffff12;border:1px solid #ffffff30;border-radius:15px;padding:12px 13px;backdrop-filter:blur(8px)}.stat b{font-size:23px;color:#f6d36a}.stat span{font-size:11px;color:#e2e9f7}
+nav{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:20;display:flex;justify-content:space-around;gap:4px;padding:9px 8px calc(9px + env(safe-area-inset-bottom));background:#061943;border:0;border-top:2px solid #e8bd42;box-shadow:0 -8px 25px #071b4925;overflow:visible}
+nav button{flex:1;min-width:0;white-space:normal;border:0;background:transparent;color:#d9e3f6;border-radius:12px;padding:8px 4px;font-size:11px;font-weight:700}
+nav button:before{display:block;font-size:19px;line-height:1.3;margin-bottom:2px;color:#e8bd42}
+nav button[data-tab="customers"]:before{content:'⌂'}nav button[data-tab="add"]:before{content:'＋'}nav button[data-tab="orders"]:before{content:'▣'}nav button[data-tab="settings"]:before{content:'⚙'}
+nav button.active{background:#ffffff16;color:#ffda68;border:1px solid #e8bd4266}
+main{max-width:850px;padding:18px 15px 28px}.panel{background:#fff;border:1px solid #e7eaf2;border-radius:18px;padding:17px;margin-bottom:15px;box-shadow:0 6px 20px #0b24500c}
+h2{font-size:19px;color:#0a2252;margin:0 0 14px}h3{color:#23406e}label{color:#455574}input,select,textarea{border:1px solid #dce2ee;border-radius:11px;background:#fbfcff;padding:13px;color:#10234c}input:focus,select:focus,textarea:focus{outline:2px solid #e8bd4277;border-color:#c59b26}
+button.primary,.btn{background:linear-gradient(135deg,#08265e,#1250a7);border:1px solid #e8bd42;border-radius:11px;padding:12px 17px;box-shadow:0 4px 10px #092c6820}
+button.secondary{border:1px solid #d9e0ed;background:#f8faff;color:#173363;border-radius:11px;padding:10px 13px}
+button.danger{border-radius:10px}.customer{padding:15px 0;border-bottom:1px solid #edf0f6}.customer strong{color:#0b2456}.tag{background:#fff5d7;color:#745600;font-weight:700}.empty{background:#f8faff;border-radius:14px;padding:28px 12px}
+.hero-card{position:relative;display:flex;overflow:hidden;min-height:185px;margin:2px 0 17px;padding:23px 20px;border-radius:22px;background:linear-gradient(115deg,#061943 0%,#0a3478 65%,#1452a1 100%);color:white;box-shadow:0 10px 25px #06194325;border:1px solid #dcb64b}
+.hero-card:after{content:'';position:absolute;width:190px;height:190px;border:1px solid #e8bd4277;border-radius:50%;right:-45px;top:-45px;box-shadow:0 0 0 16px #ffffff08,0 0 0 34px #ffffff06}
+.hero-copy{position:relative;z-index:2;max-width:78%}.eyebrow{font-size:10px;letter-spacing:2px;font-weight:800;color:#f2cf65}.eyebrow.dark{color:#a17a0c}.hero-copy h2{font-size:23px;line-height:1.15;color:#fff;margin:10px 0 7px;max-width:270px}.hero-copy p{font-size:12px;color:#d9e5fa;margin:0 0 15px}.hero-cta{border:0;border-radius:20px;padding:10px 15px;background:linear-gradient(90deg,#f5d36c,#dcae31);color:#081c45;font-weight:800}.hero-art{position:absolute;right:15px;bottom:14px;width:105px;height:125px;color:#f4cd5e}.scissor{position:absolute;right:18px;top:6px;font-size:65px;transform:rotate(-18deg);opacity:.85}.thread{position:absolute;right:0;bottom:4px;font-size:65px;opacity:.55}.needle{position:absolute;right:64px;top:3px;font-size:75px;opacity:.35}
+.quick-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-bottom:23px}.quick-card{min-height:118px;text-align:left;border:1px solid #e1e6f0;border-radius:17px;padding:15px;background:linear-gradient(145deg,#fff,#f1f4fb);color:#0b2456;box-shadow:0 5px 15px #0b24500c;display:flex;flex-direction:column;align-items:flex-start;gap:5px}.quick-card.featured{background:linear-gradient(145deg,#0a3478,#061943);color:#fff;border-color:#d9b64c}.quick-icon{display:grid;place-items:center;width:37px;height:37px;border-radius:12px;background:#eaf0fb;color:#0b347c;font-size:23px;font-weight:800}.featured .quick-icon{background:#ffffff1b;color:#f4d36e}.quick-card b{font-size:14px}.quick-card small{font-size:11px;opacity:.75}.section-heading{display:flex;align-items:center;justify-content:space-between;margin:4px 2px 10px}.section-heading h2{margin:3px 0 0}.section-mark{font-size:26px;color:#d7ad35}
+#customers .panel{padding:15px}.measure-table th{color:#29436d}.history-item{border-radius:12px;background:#fafbfe}
+@media(min-width:650px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.quick-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.hero-card{min-height:205px;padding:28px}.hero-copy h2{font-size:29px}.hero-art{right:9%;transform:scale(1.2)}}
+@media(max-width:380px){.hero-copy{max-width:85%}.hero-copy h2{font-size:20px}.hero-art{right:-10px;opacity:.75}.quick-card{min-height:108px;padding:12px}}
+@media print{body{padding:0}nav{display:none!important}}
+
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><div class="mark">✂</div><div><h1>DASSY</h1><div class="sub">TAILORING MEASUREMENT BOOK</div></div></div>
+ <div class="welcome">Welcome to your fashion workspace</div><div class="hint">Customers, measurements, orders and payments — all in one place.</div>
+ <div class="stats"><div class="stat"><b id="customerCount">0</b><span>Total customers</span></div><div class="stat"><b id="recordCount">0</b><span>Measurement records</span></div><div class="stat"><b id="activeOrderCount">0</b><span>Active orders</span></div><div class="stat"><b id="balanceCount">₦0</b><span>Outstanding balance</span></div></div>
+</header>
+<nav>
+ <button class="active" data-tab="customers">Home</button><button data-tab="add">Add</button><button data-tab="orders">Orders</button><button data-tab="settings">Settings</button>
+</nav>
+<main>
+<section id="customers" class="tab">
+ <div class="hero-card">
+  <div class="hero-copy"><div class="eyebrow">DASSY HOUSE OF FASHION</div><h2>Measure. Sew. Deliver with Style.</h2><p>Your tailoring business, beautifully organised.</p><button class="hero-cta" type="button" onclick="showTab('add')">＋ Add a customer</button></div>
+  <div class="hero-art" aria-hidden="true"><span class="scissor">✂</span><span class="thread">◉</span><span class="needle">╱</span></div>
+ </div>
+ <div class="quick-grid">
+  <button class="quick-card" type="button" onclick="showTab('customers')"><span class="quick-icon">♙</span><b>Customers</b><small>Manage records</small></button>
+  <button class="quick-card featured" type="button" onclick="renderOrders();refreshCustomerOptions();showTab('orders')"><span class="quick-icon">▣</span><b>Orders</b><small>Track sewing jobs</small></button>
+  <button class="quick-card" type="button" onclick="renderOrders();refreshCustomerOptions();showTab('orders')"><span class="quick-icon">₦</span><b>Payments</b><small>Record payments</small></button>
+  <button class="quick-card featured" type="button" onclick="showTab('settings')"><span class="quick-icon">▤</span><b>Backup & Settings</b><small>Protect your data</small></button>
+ </div>
+ <div class="section-heading"><div><span class="eyebrow dark">YOUR WORKSPACE</span><h2>Customer book</h2></div><span class="section-mark">✦</span></div>
+ <div class="panel"><input id="search" placeholder="Search name or phone number…" aria-label="Search customers"><div id="customerList"></div></div>
+</section>
+<section id="__unused_customers_old" class="hidden"><div class="panel"><h2>Customer book</h2></div></section>
+<section id="add" class="tab hidden">
+ <div class="panel">
+ <h2 id="formTitle">Add new customer</h2>
+ <form id="customerForm">
+ <input type="hidden" id="recordId">
+ <div class="grid">
+  <div class="full"><label>Customer name *</label><input id="name" required placeholder="Full name"></div>
+  <div><label>Phone number</label><input id="phone" type="tel" placeholder="Phone"></div>
+  <div><label>Customer type</label><select id="gender"><option>Men</option><option>Women</option><option>Children</option><option>Other</option></select></div>
+  <div><label>Style / outfit</label><select id="style"><option>Senator</option><option>Kaftan</option><option>Agbada</option><option>Shirt</option><option>Trousers</option><option>Suit</option><option>Gown</option><option>Skirt and blouse</option><option>Native wear</option><option>Other</option></select></div>
+  <div><label>Date measured</label><input id="date" type="date"></div>
+ </div>
+ <h3>Body measurements</h3><div class="muted">Enter measurements in inches or your preferred unit. Keep the same unit for each customer.</div>
+ <div class="grid" id="measurements"></div>
+ <div class="grid">
+  <div class="full"><label>Special notes</label><textarea id="notes" rows="3" placeholder="Fitting notes, preferred ease, design details…"></textarea></div>
+ </div>
+ <div class="actions"><button class="primary" type="submit">Save customer</button><button class="secondary" type="button" id="clearForm">Clear</button></div>
+ </form>
+ </div>
+</section>
+<section id="orders" class="tab hidden">
+ <div class="panel">
+  <h2>Orders & payments</h2>
+  <p class="muted">Track sewing jobs, delivery dates, deposits and outstanding balances. Saved offline on this phone.</p>
+  <div class="grid">
+   <div><label>Filter orders</label><select id="orderFilter"><option value="All">All orders</option><option>Pending</option><option>In progress</option><option>Completed</option><option>Delivered</option></select></div>
+   <div><label>Search order / customer</label><input id="orderSearch" placeholder="Search…"></div>
+  </div>
+  <div id="orderList"></div>
+ </div>
+ <div class="panel">
+  <h2 id="orderFormTitle">Add sewing order</h2>
+  <form id="orderForm">
+   <input type="hidden" id="orderId">
+   <div class="grid">
+    <div class="full"><label>Customer *</label><select id="orderCustomer" required><option value="">Choose customer</option></select></div>
+    <div class="full"><label>Order description / outfit *</label><input id="orderDescription" required placeholder="e.g. 2 senator outfits, blue fabric"></div>
+    <div><label>Total price (₦) *</label><input id="orderTotal" type="number" min="0" step="0.01" required placeholder="0"></div>
+    <div><label>Deposit paid (₦)</label><input id="orderDeposit" type="number" min="0" step="0.01" value="0" placeholder="0"></div>
+    <div><label>Order date</label><input id="orderDate" type="date"></div>
+    <div><label>Expected delivery</label><input id="orderDue" type="date"></div>
+    <div><label>Order status</label><select id="orderStatus"><option>Pending</option><option>In progress</option><option>Completed</option><option>Delivered</option></select></div>
+    <div class="full"><label>Order notes</label><textarea id="orderNotes" rows="2" placeholder="Fabric, colour, fitting date, special instructions…"></textarea></div>
+   </div>
+   <div class="actions"><button class="primary" type="submit">Save order</button><button class="secondary" type="button" id="clearOrder">Clear form</button></div>
+  </form>
+ </div>
+</section>
+<section id="detail" class="tab hidden">
+ <div class="panel">
+  <div class="actions" style="margin-top:0"><button class="secondary" type="button" onclick="showTab('customers')">← Back to customers</button></div>
+  <div id="detailContent"></div>
+ </div>
+</section>
+<section id="settings" class="tab hidden">
+ <div class="panel"><h2>Backup & settings</h2>
+ <div class="notice"><b>Offline storage is active.</b> Your records are saved in this browser on this phone. Export a backup regularly. Clearing browser data or uninstalling/resetting the browser can remove local records.</div>
+ <h3>Phone backup</h3><p class="muted">Download a copy of all customer records, or restore a previous DASSY backup file.</p>
+ <div class="actions"><button class="primary" id="exportBtn">Download backup</button><button class="secondary" id="importBtn">Restore backup</button><input id="importFile" type="file" accept="application/json" class="hidden"></div>
+ <h3>Google account & cloud backup</h3>
+ <div class="notice">Google sign-in and cloud sync are paused for now. Your customer records and orders are saved locally on this phone. Use Download backup regularly to protect your data.</div>
+ <h3>App information</h3><div class="muted">DASSY Tailoring Management Book · Version 3.1 · Offline customers, orders and payments.</div>
+ </div>
+</section>
+<footer>DASSY TAILORING MEASUREMENT BOOK · Your craft, your records.</footer>
+</main>
+<script>
+const fieldSets={
+ Men:["Shoulder","Neck","Chest / Bust","Waist","Hip","Top length","Sleeve length","Armhole","Wrist","Across back","Trouser length","Waist to knee","Thigh","Knee","Lap","Hem","Crotch / rise","Agbada length","Cap size"],
+ Women:["Shoulder","Neck","Bust","Under bust","Waist","Hip","Blouse length","Sleeve length","Armhole","Wrist","Across back","Shoulder to bust","Bust point","Skirt length","Gown length","Trouser length","Thigh","Knee","Lap","Hem","Crotch / rise"],
+ Children:["Shoulder","Neck","Chest","Waist","Hip","Top length","Sleeve length","Armhole","Wrist","Trouser length","Short length","Thigh","Knee","Lap","Hem","Skirt length","Gown length","Age"],
+ Other:["Shoulder","Neck","Chest / Bust","Waist","Hip","Top length","Sleeve length","Armhole","Wrist","Trouser length","Thigh","Knee","Lap","Hem","Dress length"]
+};
+const key="dassy_measurement_records_v1";
+let records=JSON.parse(localStorage.getItem(key)||"[]");
+let activeRecordId=null;
+
+// Cloud sign-in is intentionally paused in Version 3.0. Existing customer storage is preserved.
+const orderKey="dassy_orders_v1";
+let orders=[];
+try { orders=JSON.parse(localStorage.getItem(orderKey)||"[]"); if(!Array.isArray(orders)) orders=[]; } catch(e) { orders=[]; }
+function saveOrders(){ localStorage.setItem(orderKey,JSON.stringify(orders)); renderOrders(); updateDashboard(); }
+function money(value){ return "₦"+Number(value||0).toLocaleString("en-NG",{maximumFractionDigits:2}); }
+function paidAmount(order){ return (order.payments||[]).reduce((sum,p)=>sum+Number(p.amount||0),Number(order.deposit||0)); }
+function balanceAmount(order){ return Math.max(0,Number(order.total||0)-paidAmount(order)); }
+function orderCustomerName(order){ return records.find(r=>String(r.id)===String(order.customerId))?.name || order.customerName || "Customer record unavailable"; }
+function updateDashboard(){
+ const active=orders.filter(o=>!['Completed','Delivered'].includes(o.status)).length;
+ const outstanding=orders.reduce((sum,o)=>sum+balanceAmount(o),0);
+ const a=document.getElementById('activeOrderCount'), b=document.getElementById('balanceCount');
+ if(a)a.textContent=active; if(b)b.textContent=money(outstanding);
+}
+function refreshCustomerOptions(selected=''){
+ const el=document.getElementById('orderCustomer'); if(!el)return;
+ el.innerHTML='<option value="">Choose customer</option>'+records.slice().sort((a,b)=>(a.name||'').localeCompare(b.name||'')).map(r=>`<option value="${esc(r.id)}">${esc(r.name)}${r.phone?' · '+esc(r.phone):''}</option>`).join('');
+ if(selected)el.value=selected;
+}
+function renderOrders(){
+ const host=document.getElementById('orderList'); if(!host)return;
+ const filter=document.getElementById('orderFilter')?.value||'All';
+ const q=(document.getElementById('orderSearch')?.value||'').toLowerCase();
+ const list=orders.filter(o=>(filter==='All'||o.status===filter)&&(`${orderCustomerName(o)} ${o.description||''} ${o.status||''}`).toLowerCase().includes(q)).sort((a,b)=>(b.created||'').localeCompare(a.created||''));
+ host.innerHTML=list.length?list.map(o=>`<article class="customer"><div class="customer-top"><div><strong>${esc(orderCustomerName(o))}</strong><div>${esc(o.description||'')}</div><div class="muted">Due: ${esc(o.dueDate||'Not set')} · ${esc(o.status||'Pending')}</div></div><span class="tag">${esc(o.status||'Pending')}</span></div><div class="grid"><div class="muted">Total: <b>${money(o.total)}</b><br>Paid: <b>${money(paidAmount(o))}</b></div><div class="muted">Balance: <b>${money(balanceAmount(o))}</b></div></div><div class="actions"><button class="secondary" onclick="addOrderPayment('${o.id}')">Add payment</button><button class="secondary" onclick="editOrder('${o.id}')">Edit</button><button class="secondary" onclick="printOrder('${o.id}')">Print receipt</button><button class="danger" onclick="deleteOrder('${o.id}')">Delete</button></div></article>`).join(''):'<div class="empty">No orders found. Add a sewing order using the form below.</div>';
+ updateDashboard();
+}
+function clearOrderForm(){
+ const f=document.getElementById('orderForm'); if(!f)return; f.reset(); document.getElementById('orderId').value=''; document.getElementById('orderFormTitle').textContent='Add sewing order';
+ document.getElementById('orderDate').value=new Date().toISOString().slice(0,10); document.getElementById('orderDeposit').value='0'; refreshCustomerOptions();
+}
+function editOrder(id){
+ const o=orders.find(x=>String(x.id)===String(id)); if(!o)return;
+ document.getElementById('orderId').value=o.id; refreshCustomerOptions(o.customerId);
+ document.getElementById('orderDescription').value=o.description||''; document.getElementById('orderTotal').value=o.total||0;
+ document.getElementById('orderDeposit').value=o.deposit||0; document.getElementById('orderDate').value=o.orderDate||'';
+ document.getElementById('orderDue').value=o.dueDate||''; document.getElementById('orderStatus').value=o.status||'Pending';
+ document.getElementById('orderNotes').value=o.notes||''; document.getElementById('orderFormTitle').textContent='Edit sewing order';
+ document.getElementById('orderForm').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function addOrderPayment(id){
+ const o=orders.find(x=>String(x.id)===String(id)); if(!o)return;
+ const remaining=balanceAmount(o); if(remaining<=0){alert('This order is fully paid.');return;}
+ const raw=prompt(`Outstanding balance: ${money(remaining)}\nEnter payment received (₦):`); if(raw===null)return;
+ const amount=Number(raw); if(!Number.isFinite(amount)||amount<=0){alert('Enter a valid payment amount.');return;}
+ if(amount>remaining&&!confirm('This payment is greater than the remaining balance. Record it anyway?'))return;
+ o.payments=o.payments||[]; o.payments.push({amount,date:new Date().toISOString().slice(0,10),created:new Date().toISOString()}); o.updated=new Date().toISOString();
+ if(balanceAmount(o)===0 && o.status==='Pending')o.status='Completed'; saveOrders();
+}
+function deleteOrder(id){const o=orders.find(x=>String(x.id)===String(id));if(o&&confirm('Delete this order?')){orders=orders.filter(x=>String(x.id)!==String(id));saveOrders();}}
+function printOrder(id){
+ const o=orders.find(x=>String(x.id)===String(id));if(!o)return;
+ const w=window.open('','_blank'); if(!w){alert('Allow pop-ups to print this receipt.');return;}
+ w.document.write(`<!doctype html><html><head><title>DASSY Order Receipt</title><style>body{font:15px Arial;padding:28px;color:#17191d}h1{letter-spacing:3px}table{width:100%;border-collapse:collapse;margin-top:20px}td{padding:10px;border-bottom:1px solid #ddd}.muted{color:#666}</style></head><body><h1>DASSY</h1><p>TAILORING ORDER RECEIPT</p><hr><p><b>Customer:</b> ${esc(orderCustomerName(o))}</p><p><b>Order:</b> ${esc(o.description||'')}</p><p><b>Order date:</b> ${esc(o.orderDate||'')}</p><p><b>Delivery:</b> ${esc(o.dueDate||'')}</p><table><tr><td>Total price</td><td>${money(o.total)}</td></tr><tr><td>Amount paid</td><td>${money(paidAmount(o))}</td></tr><tr><td><b>Balance</b></td><td><b>${money(balanceAmount(o))}</b></td></tr><tr><td>Status</td><td>${esc(o.status||'Pending')}</td></tr></table><p class="muted">Thank you for choosing DASSY.</p><script>window.onload=()=>window.print()<\/script></body></html>`); w.document.close();
+}
+const $=id=>document.getElementById(id);
+function fieldsFor(type){return fieldSets[type]||fieldSets.Other}
+function drawMeasurements(type, values={}){
+ const fields=fieldsFor(type);
+ $("measurements").innerHTML=fields.map((f,i)=>`<div><label>${f}</label><input type="number" step="0.1" min="0" id="m${i}" placeholder="—" value="${esc(values[f]||"")}"></div>`).join("");
+}
+function persist(){ localStorage.setItem(key,JSON.stringify(records)); render(); refreshCustomerOptions(); updateDashboard(); }
+function render(){
+ $("customerCount").textContent=records.length;
+ $("recordCount").textContent=records.length;
+ const q=$("search").value.toLowerCase();
+ const list=records.filter(r=>(r.name+" "+(r.phone||"")).toLowerCase().includes(q)).sort((a,b)=>(b.updated||"").localeCompare(a.updated||""));
+ $("customerList").innerHTML=list.length?list.map(r=>`<div class="customer"><div class="customer-top"><div><strong>${esc(r.name)}</strong><div class="muted">${esc(r.phone||"No phone")} · ${esc(r.gender)} · ${esc(r.style)}</div><div class="muted">Measured: ${esc(r.date||"Not set")}</div></div><span class="tag">${Object.values(r.measurements||{}).filter(Boolean).length} values</span></div><div class="actions"><button class="secondary" onclick="viewRecord('${r.id}')">View</button><button class="secondary" onclick="editRecord('${r.id}')">Edit</button><button class="danger" onclick="deleteRecord('${r.id}')">Delete</button></div></div>`).join(""):'<div class="empty">No customers yet. Tap “Add customer” to create your first record.</div>';
+ refreshCustomerOptions(); updateDashboard();
+}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function clearForm(){
+ $("customerForm").reset();$("recordId").value="";$("formTitle").textContent="Add new customer";
+ $("date").value=new Date().toISOString().slice(0,10);drawMeasurements($("gender").value);
+}
+function editRecord(id){
+ let r=records.find(x=>x.id===id);if(!r)return;
+ $("recordId").value=id;$("name").value=r.name;$("phone").value=r.phone||"";$("gender").value=r.gender;$("style").value=r.style;$("date").value=r.date||"";$("notes").value=r.notes||"";
+ drawMeasurements(r.gender,r.measurements||{});$("formTitle").textContent="Edit customer";showTab("add");
+}
+function viewRecord(id){
+ let r=records.find(x=>x.id===id);if(!r)return;activeRecordId=id;
+ const rows=Object.entries(r.measurements||{}).filter(([k,v])=>v!==""&&v!=null).map(([k,v])=>`<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("");
+ const history=(r.history||[]).slice().reverse();
+ const historyHtml=history.length ? history.map((h,i)=>{
+   const cells=Object.entries(h.measurements||{}).filter(([k,v])=>v!==""&&v!=null).map(([k,v])=>"<span>"+esc(k)+": <b>"+esc(v)+"</b></span>").join("") || "No measurements";
+   return '<div class="history-item"><b>Previous record '+(history.length-i)+'</b><div class="muted">Saved: '+esc((h.savedAt||"").slice(0,10))+' · '+esc(h.date||"")+'</div><div class="history-grid">'+cells+'</div></div>';
+ }).join("") : "<p class='muted'>No previous measurements yet. Previous versions will appear here when you edit this customer.</p>";
+ $("detailContent").innerHTML=`
+ <div id="printArea">
+  <h2>${esc(r.name)}</h2><p class="muted">${esc(r.phone||"No phone")} · ${esc(r.gender)} · ${esc(r.style)} · Measured: ${esc(r.date||"Not set")}</p>
+  <h3>Current measurements</h3>
+  ${rows?`<table class="measure-table">${rows}</table>`:'<p class="muted">No measurements entered.</p>'}
+  ${r.notes?`<h3>Special notes</h3><p>${esc(r.notes)}</p>`:""}
+  <h3>Previous measurement history</h3>
+  ${historyHtml}
+ </div>
+ <div class="actions no-print"><button class="primary" onclick="editRecord('${r.id}')">Edit measurements</button><button class="secondary" onclick="window.print()">Print measurement sheet</button></div>`;
+ showTab("detail");
+}
+function deleteRecord(id){let r=records.find(x=>x.id===id);if(r&&confirm("Delete "+r.name+"'s record? This cannot be undone unless you have a backup.")){records=records.filter(x=>x.id!==id);persist();
+ if(currentUser) cloudPath().doc(String(id)).delete().catch(()=>cloudMessage("Deleted on this phone. Tap Sync now when online to finish cloud update."))}}
+$("customerForm").addEventListener("submit",e=>{
+ e.preventDefault();let id=$("recordId").value;let old=records.find(x=>x.id===id);
+ let measurements={};fieldsFor($("gender").value).forEach((f,i)=>{let val=$("m"+i)?.value;if(val)measurements[f]=val});
+ let history=old?.history||[];
+ if(old){history=[...history,{savedAt:new Date().toISOString(),date:old.date,measurements:old.measurements||{},notes:old.notes||""}];}
+ let item={id:id||crypto.randomUUID(),name:$("name").value.trim(),phone:$("phone").value.trim(),gender:$("gender").value,style:$("style").value,date:$("date").value,notes:$("notes").value,measurements,history,created:old?.created||new Date().toISOString(),updated:new Date().toISOString()};
+ if(old)records=records.map(x=>x.id===id?item:x);else records.push(item);
+ persist();clearForm();showTab("customers");alert("Customer record saved on this phone.");
+});
+function showTab(tab){
+ document.querySelectorAll(".tab").forEach(x=>x.classList.toggle("hidden",x.id!==tab));
+ document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x.dataset.tab===tab));
+ if(tab==="add"&&!$("recordId").value)$("date").value=new Date().toISOString().slice(0,10);
+}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>{if(b.dataset.tab==="add")clearForm();if(b.dataset.tab==="orders"){renderOrders();refreshCustomerOptions();}showTab(b.dataset.tab)}));
+$("gender").addEventListener("change",()=>drawMeasurements($("gender").value));
+$("clearForm").onclick=clearForm;$("search").oninput=render;
+$("exportBtn").onclick=()=>{let blob=new Blob([JSON.stringify({app:"DASSY Tailoring Management Book",version:3,exported:new Date().toISOString(),records,orders},null,2)],{type:"application/json"});let a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="dassy-full-backup-"+new Date().toISOString().slice(0,10)+".json";a.click();URL.revokeObjectURL(a.href)};
+$("importBtn").onclick=()=>$("importFile").click();
+$("importFile").onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let data=JSON.parse(await f.text());if(!Array.isArray(data.records))throw Error("Invalid backup");if(confirm("Import "+data.records.length+" customer records and "+(Array.isArray(data.orders)?data.orders.length:0)+" orders? Existing records with matching IDs will be updated; other records will be kept.")){const recordMap=new Map(records.map(x=>[String(x.id),x]));data.records.forEach(x=>recordMap.set(String(x.id),x));records=Array.from(recordMap.values());if(Array.isArray(data.orders)){const orderMap=new Map(orders.map(x=>[String(x.id),x]));data.orders.forEach(x=>orderMap.set(String(x.id),x));orders=Array.from(orderMap.values());localStorage.setItem(orderKey,JSON.stringify(orders));}persist();alert("Backup imported. Existing unmatched records were kept.");}}catch(err){alert("Could not read this backup file.")}e.target.value=""};
+$("orderForm").addEventListener("submit",e=>{e.preventDefault();const id=$("orderId").value;const old=orders.find(x=>String(x.id)===String(id));const customer=records.find(x=>String(x.id)===$("orderCustomer").value);if(!customer){alert('Please choose a saved customer. Add the customer first if necessary.');return;}const total=Number($("orderTotal").value),deposit=Number($("orderDeposit").value||0);if(total<0||deposit<0){alert('Amounts cannot be negative.');return;}if(!old&&deposit>total&&!confirm('Deposit is greater than the total price. Save anyway?'))return;const item={id:id||crypto.randomUUID(),customerId:customer.id,customerName:customer.name,description:$("orderDescription").value.trim(),total,deposit,orderDate:$("orderDate").value,dueDate:$("orderDue").value,status:$("orderStatus").value,notes:$("orderNotes").value.trim(),payments:old?.payments||[],created:old?.created||new Date().toISOString(),updated:new Date().toISOString()};if(old)orders=orders.map(x=>String(x.id)===String(id)?item:x);else orders.push(item);saveOrders();clearOrderForm();alert('Order saved on this phone.');});
+$("clearOrder").onclick=clearOrderForm;$("orderFilter").onchange=renderOrders;$("orderSearch").oninput=renderOrders;
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+drawMeasurements("Men");render();clearForm();clearOrderForm();renderOrders();updateDashboard();
+</script>
+</body></html>
