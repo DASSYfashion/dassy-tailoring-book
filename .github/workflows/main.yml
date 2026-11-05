@@ -1,26 +1,22 @@
 
+name: 
 name: Build DASSY Android APK
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-  workflow_dispatch:
-
-permissions:
-  contents: read
 
 jobs:
   build:
-    name: Build Android APK
     runs-on: ubuntu-latest
-    timeout-minutes: 30
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -28,42 +24,32 @@ jobs:
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: '21'
+          distribution: "temurin"
+          java-version: "21"
 
-            - name: Setup Android SDK
+      - name: Setup Android SDK
         uses: android-actions/setup-android@v4
-        
 
-      - name: Accept Android SDK licences
-        run: yes | sdkmanager --licenses > /dev/null 2>&1 || true
-
-      - name: Install Node dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: Verify web application
+      - name: Check web files
         run: test -f www/index.html
 
-      - name: Create Android project
+      - name: Add Android
         run: npx cap add android
 
-      - name: Sync Capacitor
+      - name: Sync Android
         run: npx cap sync android
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-
-      - name: Build debug APK
+      - name: Build APK
         working-directory: android
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          ./gradlew assembleDebug
 
-      - name: Upload DASSY APK
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: DASSY-Android-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
-          retention-days: 14
-          
